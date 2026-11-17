@@ -1,0 +1,323 @@
+:root {
+    --sky: #e8f4f8;
+    --blue: #4476bc;
+    --navy: #1c3150;
+    --foam: #fff
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--sky);
+    color: var(--navy);
+    font-family: Tahoma, Arial, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.notice {
+    background: var(--navy);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 11px
+}
+
+header {
+    width: min(1150px, calc(100% - 42px));
+    margin: auto;
+    padding: 26px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+header b {
+    font: 38px Georgia, serif
+}
+
+header b span {
+    display: block;
+    font: 9px Arial;
+    letter-spacing: .24em
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+    font-size: 12px
+}
+
+.tag {
+    background: #fff;
+    padding: 9px 13px;
+    border-radius: 99px;
+    font-size: 11px
+}
+
+.hero {
+    width: min(1150px, calc(100% - 42px));
+    margin: auto;
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    align-items: center
+}
+
+.hero small,
+.services small,
+.care small,
+.contact small {
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: var(--blue)
+}
+
+.hero h1,
+.services h2,
+.care h2,
+.contact h2 {
+    font: clamp(58px, 8vw, 112px)/.8 Georgia, serif;
+    letter-spacing: -.06em;
+    margin: 22px 0
+}
+
+.hero p {
+    color: #58708b;
+    max-width: 370px
+}
+
+.hero a {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 99px;
+    padding: 12px 20px;
+    margin-top: 18px;
+    font-size: 12px
+}
+
+.bubbles {
+    height: 460px;
+    background: #d2e7ee;
+    position: relative;
+    overflow: hidden;
+    border-radius: 44% 44% 16px 16px
+}
+
+.bubbles i {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset -10px -12px #bddbe5
+}
+
+.bubbles i:nth-child(1) {
+    width: 250px;
+    height: 250px;
+    left: 18%;
+    top: 15%
+}
+
+.bubbles i:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    right: 17%;
+    top: 22%
+}
+
+.bubbles i:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    left: 16%;
+    bottom: 12%
+}
+
+.bubbles i:nth-child(4) {
+    width: 130px;
+    height: 130px;
+    right: 10%;
+    bottom: 10%
+}
+
+.services {
+    background: #fff;
+    padding: 100px max(22px, calc((100% - 1070px)/2))
+}
+
+.services header {
+    width: auto;
+    padding: 0;
+    display: block
+}
+
+.services h2 {
+    font-size: 73px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px
+}
+
+.grid article {
+    padding: 25px;
+    background: #e8f4f8;
+    min-height: 230px;
+    border-radius: 12px
+}
+
+.grid span {
+    color: var(--blue);
+    font-size: 12px
+}
+
+.grid h3 {
+    font: 29px Georgia, serif
+}
+
+.grid p,
+.care p {
+    color: #59708a;
+    font-size: 14px
+}
+
+.care {
+    width: min(1070px, calc(100% - 42px));
+    margin: auto;
+    padding: 115px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px
+}
+
+.care h2 {
+    font-size: 75px
+}
+
+.care p {
+    line-height: 2;
+    align-self: end
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 12px;
+    padding: 0 max(22px, calc((100% - 1070px)/2))
+}
+
+.gallery div {
+    height: 260px;
+    background: linear-gradient(140deg, #eaf5fb, #7ca3cc);
+    border-radius: 90px 90px 15px 15px;
+    padding: 18px
+}
+
+.gallery div:nth-child(2) {
+    background: linear-gradient(140deg, #4476bc, #d4ecf2)
+}
+
+.gallery div:nth-child(3) {
+    background: linear-gradient(140deg, #1c3150, #789eca)
+}
+
+.gallery b {
+    font-size: 11px
+}
+
+.benefits {
+    width: min(1070px, calc(100% - 42px));
+    margin: auto;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.benefits div {
+    border-top: 1px solid #9cbbcc;
+    padding-top: 18px
+}
+
+.benefits b {
+    font: 30px Georgia, serif
+}
+
+.benefits p {
+    font-size: 13px;
+    color: #59708a
+}
+
+.contact {
+    text-align: center;
+    background: #d2e7ee;
+    padding: 100px 20px
+}
+
+.contact h2 {
+    font-size: 88px
+}
+
+.contact em {
+    font-size: 11px;
+    color: #59708a
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 11px;
+    color: #59708a
+}
+
+@media(max-width:650px) {
+    nav {
+        display: none
+    }
+
+    .tag {
+        display: none
+    }
+
+    .hero,
+    .care {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .hero {
+        padding: 60px 0
+    }
+
+    .bubbles {
+        height: 320px
+    }
+
+    .grid,
+    .benefits,
+    .gallery {
+        grid-template-columns: 1fr
+    }
+
+    .services,
+    .care,
+    .benefits {
+        padding-block: 65px
+    }
+
+    .gallery {
+        padding-block: 35px
+    }
+
+    .gallery div {
+        height: 170px
+    }
+}

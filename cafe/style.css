@@ -1,0 +1,290 @@
+:root {
+    --cream: #f4ead6;
+    --coffee: #4c2d20;
+    --ochre: #c17c3b;
+    --sage: #78846c
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--coffee);
+    font-family: Tahoma, Arial, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.top {
+    text-align: center;
+    background: var(--coffee);
+    color: #f6ead8;
+    padding: 8px;
+    font-size: 11px
+}
+
+header {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0
+}
+
+header b {
+    font: 44px Georgia, serif
+}
+
+header small {
+    font: 9px Arial;
+    letter-spacing: .17em;
+    display: block
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    font-size: 12px
+}
+
+.hero {
+    width: min(1100px, calc(100% - 40px));
+    margin: auto;
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px
+}
+
+.hero small,
+.eyebrow,
+.visit small {
+    font-size: 11px;
+    letter-spacing: .16em;
+    color: var(--ochre)
+}
+
+.hero h1,
+.menu h2,
+.story h2,
+.values h2,
+.visit h2 {
+    font: clamp(60px, 8vw, 112px)/.8 Georgia, serif;
+    letter-spacing: -.06em;
+    margin: 22px 0
+}
+
+.hero p {
+    color: #785847
+}
+
+.hero a {
+    border-bottom: 2px solid var(--ochre);
+    padding-bottom: 6px;
+    font-size: 13px
+}
+
+.cup {
+    height: 400px;
+    background: var(--sage);
+    border-radius: 50% 50% 4% 4%;
+    position: relative;
+    overflow: hidden
+}
+
+.cup:before {
+    content: '';
+    position: absolute;
+    width: 230px;
+    height: 200px;
+    background: #f5dec0;
+    border-radius: 0 0 110px 110px;
+    bottom: 50px;
+    right: 105px
+}
+
+.cup:after {
+    content: '';
+    position: absolute;
+    width: 76px;
+    height: 78px;
+    border: 22px solid #f5dec0;
+    border-left: 0;
+    border-radius: 0 50% 50% 0;
+    bottom: 95px;
+    right: 55px
+}
+
+.cup i {
+    position: absolute;
+    width: 140px;
+    height: 25px;
+    background: #4c2d20;
+    border-radius: 50%;
+    right: 150px;
+    bottom: 220px
+}
+
+.menu,
+.story,
+.values,
+.visit {
+    width: min(1030px, calc(100% - 40px));
+    margin: auto;
+    padding: 100px 0
+}
+
+.menu h2 {
+    font-size: 76px
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px
+}
+
+.items article {
+    border-top: 1px solid #b58d6f;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.items b {
+    font: 27px Georgia, serif
+}
+
+.items em {
+    font-size: 11px;
+    color: #9b6941
+}
+
+.story {
+    width: 100%;
+    background: #e8d1b3;
+    padding-inline: max(20px, calc((100% - 1030px)/2));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px
+}
+
+.story h2 {
+    font-size: 72px
+}
+
+.story>p {
+    line-height: 2;
+    align-self: end;
+    color: #795a47
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    padding: 75px max(20px, calc((100% - 1030px)/2));
+    gap: 14px
+}
+
+.gallery div {
+    height: 280px;
+    background: linear-gradient(140deg, #78846c, #dfb483)
+}
+
+.gallery div:nth-child(2) {
+    background: linear-gradient(140deg, #4c2d20, #c17c3b)
+}
+
+.gallery div:nth-child(3) {
+    background: linear-gradient(140deg, #f6e8d6, #ab6843)
+}
+
+.values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px
+}
+
+.values h2 {
+    font-size: 80px
+}
+
+.values div {
+    align-self: end
+}
+
+.values p {
+    padding: 13px;
+    border-bottom: 1px solid #b58d6f
+}
+
+.visit {
+    text-align: center
+}
+
+.visit h2 {
+    font-size: 90px
+}
+
+.visit em {
+    font-size: 11px;
+    color: #856653
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #4c2d20;
+    color: #f4ead6;
+    font-size: 11px
+}
+
+@media(max-width:650px) {
+    nav {
+        display: none
+    }
+
+    .hero,
+    .story,
+    .values {
+        grid-template-columns: 1fr;
+        gap: 25px
+    }
+
+    .hero {
+        padding: 55px 0
+    }
+
+    .cup {
+        height: 300px
+    }
+
+    .items {
+        grid-template-columns: 1fr
+    }
+
+    .menu,
+    .story,
+    .values,
+    .visit {
+        padding-block: 65px
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding-block: 35px
+    }
+
+    .gallery div {
+        height: 170px
+    }
+}
