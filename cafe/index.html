@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>نُوَى | نموذج مقهى</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        nav a,
+        .hero a {
+            transition: color .2s, transform .2s
+        }
+
+        nav a:hover,
+        .hero a:hover {
+            color: #c17c3b;
+            transform: translateY(-2px)
+        }
+
+        main>section {
+            animation: lift .55s ease both
+        }
+
+        @keyframes lift {
+            from {
+                opacity: 0;
+                transform: translateY(14px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+    <style>body>header{position:sticky;top:0;z-index:15;background:#f4ead6;box-shadow:0 7px 18px #4c2d2012}</style>
 </head>
 
 <body>
@@ -57,6 +86,21 @@
         </section>
     </main>
     <footer>نُوَى / نموذج مفاهيمي من Z3BE</footer>
+    <script>
+        document.querySelector('.top').remove();
+        document.title = 'نُوَى | قهوة وأطباق صغيرة';
+        document.querySelectorAll('.items em')[0].textContent = '28 درهم';
+        document.querySelectorAll('.items em')[1].textContent = '34 درهم';
+        document.querySelectorAll('.items em')[2].textContent = '26 درهم';
+        document.querySelector('.story > p').textContent = 'نُوَى مقهى حيّ في قلب المدينة، للقهوة التي تؤخذ على مهل واللقاءات التي تستحق وقتاً أطول. نختار محاصيلنا بعناية ونحضّر كل طبق يومياً.';
+        document.querySelector('.visit p').textContent = 'شارع الوصل، دبي · +971 4 356 8240';
+        document.querySelector('.visit em').textContent = 'يومياً من 7:00 ص حتى 11:00 م';
+        document.querySelector('footer').textContent = 'نُوَى · COFFEE & LITTLE PLATES';
+    </script>
+    <script>document.body.insertAdjacentHTML('afterbegin', '<a href="../index.html" style="position:fixed;z-index:20;top:16px;left:16px;padding:9px 12px;background:#4c2d20;color:#fff;font:700 11px Arial;text-decoration:none">← localhost127</a><a href="en.html" style="position:fixed;z-index:20;top:16px;left:125px;padding:9px 12px;background:#c17c3b;color:#fff;font:700 11px Arial;text-decoration:none">EN</a>');</script>
+    <script>
+        if (new URLSearchParams(location.search).get('lang') === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Nuwa | Coffee & Little Plates'; const q = (s, v) => { const e = document.querySelector(s); if (e) e.innerHTML = v }, a = (s, v) => document.querySelectorAll(s).forEach((e, i) => e.innerHTML = v[i] || v); q('header>b', 'NUWA<small>COFFEE · LITTLE PLATES</small>'); a('header nav a', ['Menu', 'Our story', 'Visit']); q('.hero small', 'EVERYDAY, MADE SLOW'); q('.hero h1', 'Coffee<br>brings us close.'); q('.hero p', 'A warm place for coffee, little plates, and conversations that stay a little longer.'); q('.hero a', 'View the menu'); q('.menu .eyebrow', '01 / LITTLE MENU'); q('.menu h2', 'Take it<br>slow.'); a('.items span', ['Coffee of the day', 'Little plate', 'Something sweet']); a('.items b', ['Seasonal cup', 'Fresh bread with a light filling', 'Something sweet to share']); a('.items em', ['AED 28', 'AED 34', 'AED 26']); q('.story .eyebrow', '02 / THE IDEA'); q('.story h2', 'A window<br>for time.'); q('.story>p', 'Nuwa is a neighbourhood coffee shop for cups taken slowly and conversations worth lingering over. We select our coffee with care and make every plate fresh each day.'); q('.values h2', 'Small.<br>Warm.<br>Honest.'); a('.values p', ['Coffee made with care', 'Fresh little plates, daily', 'A comfortable place to meet']); q('.visit small', '03 / VISIT'); q('.visit h2', 'Come in.'); q('.visit p', 'Al Wasl Road, Dubai · +971 4 356 8240'); q('.visit em', 'Every day, 7 AM — 11 PM'); q('footer', 'NUWA · COFFEE & LITTLE PLATES'); document.querySelectorAll('a[href="../index.html"]').forEach(x => x.href = '../index.html?lang=en'); document.querySelectorAll('a[href="en.html"]').forEach(x => { x.href = 'index.html'; x.textContent = 'AR' }) }
+    </script>
 </body>
 
 </html>

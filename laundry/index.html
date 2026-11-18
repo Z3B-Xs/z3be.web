@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>نقاء | نموذج مغسلة</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        nav a,
+        .tag,
+        .hero a {
+            transition: transform .2s, box-shadow .2s
+        }
+
+        nav a:hover,
+        .tag:hover,
+        .hero a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px #1c315033
+        }
+
+        main>section {
+            animation: lift .55s ease both
+        }
+
+        @keyframes lift {
+            from {
+                opacity: 0;
+                transform: translateY(14px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+    <style>body>header{position:sticky;top:0;z-index:15;background:#e8f4f8;box-shadow:0 7px 18px #1c315012}</style>
 </head>
 
 <body>
@@ -69,6 +100,22 @@
         </section>
     </main>
     <footer>نقاء / نموذج مفاهيمي من Z3BE</footer>
+    <script>
+        document.querySelector('.notice').remove();
+        document.title = 'نقاء | Laundry Care';
+        document.querySelector('.tag').textContent = 'اطلب الاستلام';
+        document.querySelectorAll('.grid p')[0].textContent = 'غسيل وطيّ يومي بتسليم مرتب وفي الموعد.';
+        document.querySelectorAll('.grid p')[1].textContent = 'برنامج لطيف للحرير والكتان والقطع التي تحتاج عناية خاصة.';
+        document.querySelectorAll('.grid p')[2].textContent = 'كيّ احترافي وتغليف أنيق ليبقى كل شيء جاهزاً.';
+        document.querySelector('.care p').textContent = 'نستلم قطعك من بابك ونعيدها نظيفة، مرتبة، وجاهزة ليومك. العناية الهادئة تبدأ من التفاصيل الصغيرة.';
+        document.querySelector('.contact p').textContent = 'جميرا، دبي · +971 55 418 9260';
+        document.querySelector('.contact em').textContent = 'الاستلام والتسليم متاحان يومياً';
+        document.querySelector('footer').textContent = 'نقاء LAUNDRY CARE · نظافة تشبه الراحة';
+    </script>
+    <script>document.body.insertAdjacentHTML('afterbegin', '<a href="../index.html" style="position:fixed;z-index:20;top:16px;left:16px;padding:9px 12px;background:#1c3150;color:#fff;font:700 11px Arial;text-decoration:none">← localhost127</a><a href="en.html" style="position:fixed;z-index:20;top:16px;left:125px;padding:9px 12px;background:#4476bc;color:#fff;font:700 11px Arial;text-decoration:none">EN</a>');</script>
+    <script>
+        if (new URLSearchParams(location.search).get('lang') === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Naqaa | Laundry Care'; const q = (s, v) => { const e = document.querySelector(s); if (e) e.innerHTML = v }, a = (s, v) => document.querySelectorAll(s).forEach((e, i) => e.innerHTML = v[i] || v); q('header>b', 'NAQAA<span>LAUNDRY CARE</span>'); a('header nav a', ['Services', 'Care', 'Contact']); q('.tag', 'Request pickup'); q('.hero small', 'CLEAN, CALM, CLEAR'); q('.hero h1', 'Ease in<br>every wash.'); q('.hero p', 'Thoughtful laundry care that gives you back time while treating every piece with attention.'); q('.hero a', 'Our services'); q('.services small', '01 / SERVICES'); q('.services h2', 'Care as it<br>should be.'); a('.grid h3', ['Everyday Laundry', 'Special Pieces', 'Press & Pack']); a('.grid p', ['Wash, fold, and a neat return, always on time.', 'Gentle care for silk, linen, and delicate fabrics.', 'Professional pressing and thoughtful packaging.']); q('.care small', '02 / OUR PROMISE'); q('.care h2', 'Lighter<br>on your day.'); q('.care p', 'We collect your pieces from your door and return them clean, neat, and ready for your day. Care begins with the smallest details.'); a('.benefits b', ['Clarity', 'Care', 'Calm']); a('.benefits p', ['Service details that are easy to understand.', 'Thoughtful policies for every fabric.', 'A light, orderly digital experience.']); q('.contact small', '03 / CONTACT'); q('.contact h2', 'Leave it with us.'); q('.contact p', 'Jumeirah, Dubai · +971 55 418 9260'); q('.contact em', 'Pickup and delivery available every day'); q('footer', 'NAQAA LAUNDRY CARE · Clean comfort'); document.querySelectorAll('a[href="../index.html"]').forEach(x => x.href = '../index.html?lang=en'); document.querySelectorAll('a[href="en.html"]').forEach(x => { x.href = 'index.html'; x.textContent = 'AR' }) }
+    </script>
 </body>
 
 </html>

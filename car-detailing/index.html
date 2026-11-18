@@ -6,6 +6,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>مدار | نموذج عناية سيارات</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        header a,
+        .button,
+        .copy>a {
+            transition: transform .2s, filter .2s
+        }
+
+        header a:hover,
+        .button:hover,
+        .copy>a:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1)
+        }
+
+        main>section {
+            animation: lift .55s ease both
+        }
+
+        @keyframes lift {
+            from {
+                opacity: 0;
+                transform: translateY(14px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+    <style>body>header{position:sticky;top:0;z-index:15;background:#07161d}</style>
 </head>
 
 <body>
@@ -67,6 +98,21 @@
         </section>
     </main>
     <footer>مدار / نموذج تجريبي من Z3BE</footer>
+    <script>
+        document.querySelector('.bar').remove();
+        document.title = 'مدار | عناية السيارات';
+        document.querySelectorAll('.list p')[0].textContent = 'غسيل خارجي وداخلي بمواد آمنة ولمسة نهائية متقنة.';
+        document.querySelectorAll('.list p')[1].textContent = 'حماية طلاء وتلميع يعيد للسيارة حضورها الهادئ.';
+        document.querySelectorAll('.list p')[2].textContent = 'تنظيف عميق للمقصورة مع عناية بالأقمشة والجلد.';
+        document.querySelector('.studio p').textContent = 'في مدار نعامل كل سيارة كأنها تبدأ رحلة جديدة. عناية دقيقة، مواد مختارة، ونتيجة تلاحظها من أول نظرة.';
+        document.querySelector('.contact p').textContent = 'طريق الخيل، دبي · +971 55 742 3190';
+        document.querySelector('.contact em').remove();
+        document.querySelector('footer').textContent = 'مدار CAR CARE · الأحد — السبت · 9:00 ص — 9:00 م';
+    </script>
+    <script>document.body.insertAdjacentHTML('afterbegin', '<a href="../index.html" style="position:fixed;z-index:20;top:16px;left:16px;padding:9px 12px;background:#f4ffff;color:#07161d;font:700 11px Arial;text-decoration:none">← localhost127</a><a href="en.html" style="position:fixed;z-index:20;top:16px;left:125px;padding:9px 12px;background:#09a6c2;color:#07161d;font:700 11px Arial;text-decoration:none">EN</a>');</script>
+    <script>
+        if (new URLSearchParams(location.search).get('lang') === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Madar | Car Care'; const q = (s, v) => { const e = document.querySelector(s); if (e) e.innerHTML = v }, a = (s, v) => document.querySelectorAll(s).forEach((e, i) => e.innerHTML = v[i] || v); q('header>b', 'MADAR<span>CAR CARE</span>'); a('header nav a', ['Services', 'Studio', 'Contact']); q('.button', 'Request a quote'); q('.copy small', 'PRECISION / 01'); q('.copy h1', 'Every surface.<br>In place.'); q('.copy p', 'Car care built around precision, transparency, and a memorable first impression.'); q('.copy>a', 'Explore services ↓'); q('.service small', '02 / SERVICES'); q('.service h2', 'Care in<br>the details.'); a('.list h3', ['Precision Wash', 'Polish & Protect', 'Interior Care']); a('.list p', ['Exterior and interior cleaning with carefully selected products.', 'Paint protection and polish for a finish that lasts.', 'Deep cabin care for leather, fabric, and every surface.']); q('.studio small', '03 / OUR STANDARD'); q('.studio h2', 'The car<br>speaks.'); q('.studio p', 'At Madar, every car starts a new journey. Precise care, selected materials, and a finish you notice at first glance.'); q('.why h2', 'Clear work.<br>Clear result.'); a('.why li', ['Materials that respect your car', 'Attention to every detail', 'A clear plan before we begin']); q('.contact small', '04 / CONTACT'); q('.contact h2', 'Ready for the road.'); q('.contact p', 'Al Khail Road, Dubai · +971 55 742 3190'); q('footer', 'MADAR CAR CARE · Sunday — Saturday · 9 AM — 9 PM'); document.querySelectorAll('a[href="../index.html"]').forEach(x => x.href = '../index.html?lang=en'); document.querySelectorAll('a[href="en.html"]').forEach(x => { x.href = 'index.html'; x.textContent = 'AR' }) }
+    </script>
 </body>
 
 </html>

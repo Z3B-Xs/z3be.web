@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #17242d;
+    --accent: #ff5638;
+    --soft: #f5f1ea;
+    --card: #e5e1d9
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--soft);
+    color: var(--ink);
+    font-family: Manrope, Arial, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.en-header {
+    min-height: 80px;
+    padding: 15px clamp(22px, 6vw, 88px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #17242d22;
+    gap: 18px
+}
+
+.en-brand {
+    font: 800 21px/1 'DM Mono', monospace;
+    letter-spacing: -1.5px
+}
+
+.en-brand small {
+    display: block;
+    margin-top: 5px;
+    font: 9px 'DM Mono', monospace;
+    letter-spacing: 1px;
+    color: #687077
+}
+
+.en-nav {
+    display: flex;
+    gap: 22px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.en-nav a:hover {
+    color: var(--accent)
+}
+
+.lang {
+    border: 1px solid var(--ink);
+    padding: 8px 12px;
+    font: 11px 'DM Mono', monospace
+}
+
+.hero-en {
+    min-height: 590px;
+    padding: 75px max(22px, 10vw);
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 60px;
+    overflow: hidden
+}
+
+.eyebrow-en {
+    margin: 0 0 18px;
+    color: var(--accent);
+    font: 11px 'DM Mono', monospace;
+    letter-spacing: 1px
+}
+
+.hero-en h1 {
+    margin: 0 0 24px;
+    font-size: clamp(3.4rem, 8vw, 7.6rem);
+    line-height: .86;
+    letter-spacing: -.09em
+}
+
+.hero-en h1 em {
+    font-style: normal;
+    color: var(--accent)
+}
+
+.hero-en p:not(.eyebrow-en) {
+    max-width: 485px;
+    color: #637078;
+    line-height: 1.8;
+    font-size: 1.03rem
+}
+
+.cta-en {
+    display: inline-block;
+    margin-top: 19px;
+    padding: 14px 19px;
+    background: var(--ink);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    transition: .2s
+}
+
+.cta-en:hover {
+    background: var(--accent);
+    transform: translateY(-2px)
+}
+
+.art-en {
+    height: 355px;
+    position: relative;
+    background: var(--accent);
+    overflow: hidden
+}
+
+.art-en:before {
+    content: '';
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border: 28px solid var(--ink);
+    border-radius: 50%;
+    right: -55px;
+    top: -60px
+}
+
+.art-en:after {
+    content: '127';
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: #fff;
+    font: 800 clamp(4rem, 11vw, 8rem)/1 'DM Mono', monospace;
+    letter-spacing: -10px
+}
+
+.art-en span {
+    position: absolute;
+    width: 44%;
+    height: 48%;
+    left: 17%;
+    top: 28%;
+    background: #f7eee2;
+    box-shadow: 22px 22px 0 var(--ink)
+}
+
+.en-section {
+    padding: 90px max(22px, 10vw);
+    background: #fff
+}
+
+.en-section.alt {
+    background: var(--ink);
+    color: #fff
+}
+
+.en-section h2 {
+    margin: 0 0 35px;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+    line-height: .95;
+    letter-spacing: -.07em
+}
+
+.service-en {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px
+}
+
+.service-en article {
+    min-height: 205px;
+    padding: 25px;
+    background: var(--card);
+    display: flex;
+    flex-direction: column;
+    justify-content: end
+}
+
+.alt .service-en article {
+    background: #263741
+}
+
+.service-en b {
+    color: var(--accent);
+    font: 11px 'DM Mono', monospace
+}
+
+.service-en h3 {
+    margin: 25px 0 8px;
+    font-size: 1.35rem
+}
+
+.service-en p {
+    margin: 0;
+    color: #627078;
+    font-size: .9rem;
+    line-height: 1.7
+}
+
+.alt .service-en p {
+    color: #c0c9cc
+}
+
+.en-footer {
+    padding: 38px max(22px, 10vw);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background: #101a20;
+    color: #dfe6e8;
+    font-size: 12px
+}
+
+.en-footer a:hover {
+    color: #ff5638
+}
+
+@media(max-width:700px) {
+    .en-header {
+        padding-inline: 20px
+    }
+
+    .en-nav {
+        display: none
+    }
+
+    .hero-en {
+        grid-template-columns: 1fr;
+        padding: 65px 24px;
+        gap: 45px
+    }
+
+    .art-en {
+        height: 270px
+    }
+
+    .en-section {
+        padding: 65px 24px
+    }
+
+    .service-en {
+        grid-template-columns: 1fr
+    }
+
+    .en-footer {
+        display: block
+    }
+
+    .en-footer p {
+        margin-top: 12px
+    }
+}

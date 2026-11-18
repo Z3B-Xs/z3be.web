@@ -6,6 +6,35 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>قوّة | نموذج نادي رياضي</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        aside a,
+        .hero a {
+            transition: transform .2s, filter .2s
+        }
+
+        aside a:hover,
+        .hero a:hover {
+            transform: translateX(-3px);
+            filter: brightness(1.08)
+        }
+
+        main>section {
+            animation: lift .55s ease both
+        }
+
+        @keyframes lift {
+            from {
+                opacity: 0;
+                transform: translateY(14px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+    </style>
+    <style>aside{z-index:15;box-shadow:8px 0 18px #00000012}</style>
 </head>
 
 <body>
@@ -62,6 +91,18 @@
             <p>hello@example.demo · 000 000 000</p><em>معلومات تجريبية فقط</em>
         </section>
     </main>
+    <script>
+        document.querySelector('.notice').remove();
+        document.querySelector('aside small').textContent = 'PULSE FITNESS · DUBAI';
+        document.title = 'قوّة | نادي رياضي';
+        document.querySelector('.club p').textContent = 'قوّة مساحة تدريب مبنية حول هدفك. برامج واضحة، مدربون حاضرون، وإيقاع يناسب يومك حتى تواصل التقدم بثقة.';
+        document.querySelector('.contact p').textContent = 'البرشاء، دبي · +971 55 864 2071';
+        document.querySelector('.contact em').remove();
+    </script>
+    <script>document.body.insertAdjacentHTML('afterbegin', '<a href="../index.html" style="position:fixed;z-index:20;top:16px;left:16px;padding:9px 12px;background:#171514;color:#fff;font:700 11px Arial;text-decoration:none">← localhost127</a><a href="en.html" style="position:fixed;z-index:20;top:16px;left:125px;padding:9px 12px;background:#d7ff35;color:#171514;font:700 11px Arial;text-decoration:none">EN</a>');</script>
+    <script>
+        if (new URLSearchParams(location.search).get('lang') === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; document.title = 'Qowa | Fitness Club'; const q = (s, v) => { const e = document.querySelector(s); if (e) e.innerHTML = v }, a = (s, v) => document.querySelectorAll(s).forEach((e, i) => e.innerHTML = v[i] || v); q('aside>b', 'QOWA'); a('aside a', ['Start', 'Training', 'Club', 'Contact']); q('aside small', 'PULSE FITNESS · DUBAI'); q('.hero small', 'BUILD YOUR PACE'); q('.hero h1', 'Move with<br>power.'); q('.hero p', 'A focused fitness club built around personal progress, not noise.'); q('.hero a', 'See the training paths'); q('.training small', '01 / TRAINING'); q('.training h2', 'Choose your<br>rhythm.'); a('.training article p', ['Build a strong foundation and progress with purpose.', 'Energy-building sessions with movement that keeps you engaged.', 'Time for mobility and recovery.']); q('.club small', '02 / THE CLUB'); q('.club h2', 'A place<br>to focus.'); q('.club p', 'Qowa is a training space built around your goal. Clear programmes, present coaches, and a rhythm that fits your day.'); a('.gallery figcaption', ['Movement space', 'Strength space', 'Recovery space']); q('.reasons h2', 'A club<br>on your terms.'); a('.reasons p', ['<b>Coaches</b> Clear guidance and practical steps.', '<b>Flexibility</b> A routine that fits your time.', '<b>Energy</b> An environment that brings you back.']); q('.contact small', '03 / CONTACT'); q('.contact h2', 'Start moving.'); q('.contact p', 'Al Barsha, Dubai · +971 55 864 2071'); document.querySelectorAll('a[href="../index.html"]').forEach(x => x.href = '../index.html?lang=en'); document.querySelectorAll('a[href="en.html"]').forEach(x => { x.href = 'index.html'; x.textContent = 'AR' }) }
+    </script>
 </body>
 
 </html>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>مرافئ | نموذج صالون تجميل</title>
     <link rel="stylesheet" href="style.css">
+    <style>nav a,.hero a{transition:transform .2s,box-shadow .2s}nav a:hover,.hero a:hover{transform:translateY(-2px);box-shadow:0 8px 18px #35252922}main>section{animation:lift .55s ease both}@keyframes lift{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
+    <style>body>header{position:sticky;top:0;z-index:15;background:#f7eeec;box-shadow:0 7px 18px #35252912}</style>
 </head>
 
 <body><a class="skip" href="#main">انتقال للمحتوى</a>
@@ -66,6 +68,18 @@
         </section>
     </main>
     <footer>مرافئ — نموذج مفاهيمي غير رسمي من Z3BE</footer>
+<script>
+document.querySelector('.note').remove();
+document.title='مرافئ | Beauty Atelier';
+document.querySelector('.story > p').textContent='مرافئ مساحة هادئة للعناية التي تبدأ بالاستماع. نمنح كل زيارة وقتها، من الاستشارة الأولى حتى اللمسة الأخيرة.';
+document.querySelector('.contact p').textContent='طريق جميرا، دبي · +971 55 339 7142';
+document.querySelector('.contact span').textContent='الحجوزات يومياً من 10:00 ص إلى 9:00 م';
+document.querySelector('footer').textContent='مرافئ BEAUTY ATELIER · جمال بهدوء';
+</script>
+<script>document.body.insertAdjacentHTML('afterbegin','<a href="../index.html" style="position:fixed;z-index:20;top:16px;left:16px;padding:9px 12px;background:#352529;color:#fff;font:700 11px Arial;text-decoration:none">← localhost127</a><a href="en.html" style="position:fixed;z-index:20;top:16px;left:125px;padding:9px 12px;background:#b55e77;color:#fff;font:700 11px Arial;text-decoration:none">EN</a>');</script>
+<script>
+if(new URLSearchParams(location.search).get('lang')==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr';document.title='Marafi | Beauty Atelier';const q=(s,v)=>{const e=document.querySelector(s);if(e)e.innerHTML=v},a=(s,v)=>document.querySelectorAll(s).forEach((e,i)=>e.innerHTML=v[i]||v);q('header>b','MARAFI<small>BEAUTY ATELIER</small>');a('header nav a',['Services','About','Contact']);q('.hero span','BEAUTY, QUIETLY');q('.hero h1','Space for<br>your glow.');q('.hero p','A gentle beauty experience shaped around your time and your style.');q('.hero a','Discover the atelier');q('.services .eyebrow','01 / OUR RITUALS');q('.services h2','Care that feels like you.');a('.cards h3',['Hair','Nails','Skin']);a('.cards p',['Cut, colour, and care tailored to you.','Polished details in the colour you love.','Restoring treatments for a calm, fresh complexion.']);q('.story .eyebrow','02 / THE FEELING');q('.story h2','More than<br>an appointment.');q('.story>p','Marafi is a quiet space for care that begins with listening. Every visit gets its time, from the first consultation to the final touch.');q('.benefits .eyebrow','03 / WHY US');a('.benefits h3',['Time for you','Specialist team','Considered care']);q('.contact h2','Take your time.');q('.contact p','Jumeirah Road, Dubai · +971 55 339 7142');q('.contact span','Appointments daily from 10 AM to 9 PM');q('footer','MARAFI BEAUTY ATELIER · Beauty, quietly');document.querySelectorAll('a[href="../index.html"]').forEach(x=>x.href='../index.html?lang=en');document.querySelectorAll('a[href="en.html"]').forEach(x=>{x.href='index.html';x.textContent='AR'})}
+</script>
 </body>
 
 </html>
