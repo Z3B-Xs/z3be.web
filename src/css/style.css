@@ -87,6 +87,28 @@ nav a:hover {
     transition: transform .2s, background .2s
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.lang-switch {
+    min-width: 42px;
+    padding: 11px 10px;
+    border: 1px solid var(--ink);
+    text-align: center;
+    font: 700 12px/1 'DM Mono', monospace;
+    transition: color .2s, background .2s, transform .2s
+}
+
+.lang-switch:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateY(-2px)
+}
+
 .header-cta:hover,
 .primary-link:hover {
     transform: translateY(-2px);
@@ -611,6 +633,10 @@ h1 em {
     .site-header nav,
     .header-cta {
         display: none
+    }
+
+    .header-actions {
+        margin-inline-start: auto
     }
 
     .brand img {

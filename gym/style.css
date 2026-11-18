@@ -29,8 +29,6 @@ a {
 
 aside {
     min-height: 100vh;
-    position: sticky;
-    top: 0;
     background: var(--acid);
     color: #161615;
     padding: 26px 18px;
